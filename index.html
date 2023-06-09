@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ゴブレットゴブラーズ風三目並べ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="main.js" defer></script> -->
+    <script src="game.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>ゴブレットゴブラーズ風ゲーム</h1>
+      </header>
+      <main>
+        <div class="board">
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+          <div class="panel"></div>
+        </div>
+        <div class="gobblets-area orange"></div>
+        <div class="gobblets-area blue"></div>
+        <div class="modal">
+          <div class="modal-content">
+            <div class="row">
+              <p class="select-text">あなたの色を選択してください</p>
+              <button class="select-orange select-button">オレンジ</button>
+              <button class="select-blue select-button">ブルー</button>
+            </div>
+            <div class="row">
+              <p class="select-text">先行か後行を選んでください</p>
+              <button class="select-first select-button">先行</button>
+              <button class="select-second select-button">後行</button>
+            </div>
+            <button class="game-button">スタート</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

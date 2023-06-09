@@ -1,0 +1,210 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --board-size: 300px;
+  --panel-size: 100px;
+  --small-size: 30px;
+  --medium-size: 50px;
+  --large-size: 70px;
+}
+
+button {
+  border: inherit;
+}
+
+main {
+  margin: 20px;
+}
+
+header {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: yellow;
+}
+
+h1 {
+  font-size: 22px;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: var(--board-size);
+  margin: 0 auto;
+}
+
+.panel {
+  width: var(--panel-size);
+  height: var(--panel-size);
+  border: 1px solid;
+  position: relative;
+}
+
+.panel > .gobblet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gobblets-area {
+  display: flex;
+  height: 100px;
+  align-items: end;
+  padding: 10px;
+  margin-top: 20px;
+  position: relative;
+}
+
+.gobblets-area.first {
+  border: 5px solid red;
+}
+
+.gobblets-area.first::after {
+  content: "先行";
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background: red;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.gobblets-area.second {
+  justify-content: end;
+  border: 5px solid blue;
+}
+
+.gobblets-area.second::after {
+  content: "後行";
+  padding: 10px;
+  font-size: 30px;
+  color: white;
+  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gobblet {
+  margin-right: 10px;
+}
+
+.gobblet.selecting {
+  border: 5px solid red;
+}
+
+.small {
+  width: var(--small-size);
+  height: var(--small-size);
+}
+
+.medium {
+  width: var(--medium-size);
+  height: var(--medium-size);
+}
+
+.large {
+  width: var(--large-size);
+  height: var(--large-size);
+}
+
+.gobblet.orange {
+  background-color: orange;
+}
+
+.gobblet.blue {
+  background-color: blue;
+}
+
+.modal {
+  background-color: white;
+  border: 4px solid red;
+  margin: 20px;
+  padding: 20px;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  right: 0;
+}
+
+.select-text {
+  font-size: 25px;
+  margin-bottom: 6px;
+}
+
+.select-button {
+  background: white;
+  padding: 18px 40px;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.select-orange {
+  border: 3px solid orange;
+  color: orange;
+}
+
+.select-orange:hover,
+.select-orange.selecting {
+  background-color: orange;
+  color: white;
+}
+
+.select-blue:hover,
+.select-blue.selecting {
+  background-color: blue;
+  color: white;
+}
+
+.select-blue {
+  border: 3px solid blue;
+  color: blue;
+}
+
+.select-first {
+  border: 3px solid red;
+  color: red;
+}
+
+.select-second {
+  border: 3px solid blue;
+  color: blue;
+}
+
+.select-first:hover,
+.select-first.selecting {
+  background: red;
+  color: white;
+}
+
+.select-second:hover,
+.select-second.selecting {
+  background: blue;
+  color: white;
+}
+
+.row {
+  margin-bottom: 20px;
+}
+
+.game-button {
+  background: white;
+  color: pink;
+  padding: 16px 40px;
+  border: 3px solid pink;
+  border-radius: 10px;
+  font-size: 22px;
+}
+
+.game-button:hover {
+  background: pink;
+  color: white;
+}
